@@ -1,0 +1,23 @@
+button {
+    height: 40px;
+    width: 160px;
+    background-color: transparent;
+    border: 0px;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background-color: azure;
+    color: inherit;
+}
+
+.resume {
+    background-color: blue;
+    color: white;
+}

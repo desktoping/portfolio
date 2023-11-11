@@ -1,0 +1,67 @@
+.card {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(216, 193, 104);
+    padding: 10px;
+}
+
+.card img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.underline {
+    height: 3px;
+    width: 45px;
+    display: inline-block;
+    background-color: blue;
+    margin: 15px;
+}
+
+.job-title {
+    padding: 20px;
+    font-size: 32px;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.social {
+    background-color: white;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social a {
+    margin-left: 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+    .card-container {
+        position: absolute;
+        top: calc(50% - 200px);
+        right: calc(0px - min(calc(30%), 200px));
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1199px) {}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+    .card-container {
+        position: absolute;
+        top: calc(50% - 200px);
+        right: -50px;
+    }
+}
+
+@media only screen and (max-width: 480px) {}
