@@ -1,11 +1,7 @@
 import { Document, Page } from "react-pdf";
 import { ResumeViewContextConsumer } from "../context";
-import { useState } from "react";
-
-// const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
 const Resume = () => {
-  const [loaded, setLoaded] = useState(false);
   return (
     <div
       style={{
@@ -21,7 +17,7 @@ const Resume = () => {
         <ResumeViewContextConsumer>
           {({ toggleValue }) => (
             <>
-              <a href="/resume.pdf" target="_blank" rel="noreferrer">
+              <a href="./resume.pdf" target="_blank" rel="noreferrer">
                 <button>DOWNLOAD</button>
               </a>
               <button onClick={toggleValue}>CLOSE</button>
