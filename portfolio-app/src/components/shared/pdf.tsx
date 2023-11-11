@@ -17,7 +17,11 @@ const Resume = () => {
         <ResumeViewContextConsumer>
           {({ toggleValue }) => (
             <>
-              <a href="./resume.pdf" target="_blank" rel="noreferrer">
+              <a
+                href="https://reden-portfolio.s3.ap-southeast-2.amazonaws.com/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <button>DOWNLOAD</button>
               </a>
               <button onClick={toggleValue}>CLOSE</button>
@@ -26,7 +30,10 @@ const Resume = () => {
         </ResumeViewContextConsumer>
       </div>
       <div>
-        <Document file="/resume.pdf" loading>
+        <Document
+          file="https://reden-portfolio.s3.ap-southeast-2.amazonaws.com/resume.pdf"
+          loading
+        >
           <Page renderTextLayer={false} pageNumber={1} />
         </Document>
       </div>

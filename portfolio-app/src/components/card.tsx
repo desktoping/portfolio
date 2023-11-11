@@ -15,29 +15,27 @@ const Card = () => {
       }}
     >
       <div className="card">
-        <img src="./profile.jpg" alt="profile" />
+        <img
+          src="https://reden-portfolio.s3.ap-southeast-2.amazonaws.com/profile.jpg"
+          alt="profile"
+        />
         <h2>Reden Sanchez</h2>
         <div className="underline" />
         <div className="job-title">Software Developer</div>
         <div className="social">
-          <a href="https://facebook.com" target="_blank" rel="noreferrer">
+          <a
+            href="mailto:redensanchez.jobs@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
-              viewBox="0 0 24 24"
-            >
-              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-            </svg>
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noreferrer">
-            <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
             >
-              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+              <path d="M19 24h-14c-2.761 0-5-2.239-5-5v-14c0-2.761 2.239-5 5-5h14c2.762 0 5 2.239 5 5v14c0 2.761-2.238 5-5 5zm-.141-6.333c.63 0 1.141-.512 1.141-1.142v-9.05c0-.63-.511-1.142-1.141-1.142h-13.718c-.63 0-1.141.512-1.141 1.142v9.05c0 .63.511 1.142 1.141 1.142h13.718zm-6.859-4.058l-6.228-4.321-.014 7.712h12.457v-7.712l-6.215 4.321zm5.913-6.609c-1.745 1.215-5.913 4.153-5.913 4.153l-5.947-4.153h11.86z" />
             </svg>
           </a>
 
@@ -56,7 +54,11 @@ const Card = () => {
             </svg>
           </a>
 
-          <a href="https://github.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/desktoping"
+            target="_blank"
+            rel="noreferrer"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
