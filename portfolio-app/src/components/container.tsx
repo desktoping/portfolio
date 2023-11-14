@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Card from "./card";
-import "./container.css";
+import "./css/container.css";
 import Content from "./content";
 import Centered from "./shared/centered";
 import Resume from "./shared/pdf";
@@ -9,6 +9,7 @@ import {
   ResumeViewContextProvider,
 } from "./context";
 import ReactDOM from "react-dom";
+import { useMediaQuery } from "./shared/use-media-query";
 
 /**
  * main page container
@@ -19,6 +20,7 @@ import ReactDOM from "react-dom";
 const Container = () => {
   const [showResume, setShowResume] = useState(false);
   const toggleResume = () => setShowResume(!showResume);
+  const isMedium = useMediaQuery("(max-width: 1199px)");
 
   return (
     <ResumeViewContextProvider
@@ -27,7 +29,14 @@ const Container = () => {
       <ResumeViewContextConsumer>
         {({ show }) => show && ReactDOM.createPortal(<Resume />, document.body)}
       </ResumeViewContextConsumer>
-      <div style={{ display: "flex", height: "100vh", width: "100vw" }}>
+      <div
+        style={{
+          display: "flex",
+          height: "100vh",
+          width: "100vw",
+          flexDirection: isMedium ? "column" : "row",
+        }}
+      >
         <div className="side-bg">
           <Centered>
             {/* Need to initialize width for the child position */}

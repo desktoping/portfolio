@@ -1,20 +1,26 @@
-import "./card.css";
+import "./css/card.css";
+import { useMediaQuery } from "./shared/use-media-query";
 
 const Card = () => {
+  const isSmall = useMediaQuery("(max-width: 480px)");
+
   return (
     <div
       className="card-container"
       style={{
         backgroundColor: "white",
-        height: 500,
-        width: 400,
         display: "flex",
-        overflow: "hidden",
-        borderRadius: "5px",
-        boxShadow: "-5px 5px 10px #1e1616",
       }}
     >
-      <div className="card">
+      <div
+        className={`card ${isSmall ? "small" : ""}`}
+        style={{
+          overflow: "hidden",
+          height: 500,
+          borderRadius: "5px",
+          boxShadow: "-5px 5px 10px #1e1616",
+        }}
+      >
         <img
           src="https://reden-portfolio.s3.ap-southeast-2.amazonaws.com/profile.jpg"
           alt="profile"

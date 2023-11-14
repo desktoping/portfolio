@@ -4,6 +4,8 @@
     text-align: center;
     background-color: rgb(216, 193, 104);
     padding: 10px;
+    position: relative;
+    width: 400px;
 }
 
 .card img {
@@ -53,15 +55,33 @@
 
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1199px) {}
-
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (max-width: 1199px) {
+    .card {
+        height: 500px;
+    }
 
     .card-container {
-        position: absolute;
-        top: calc(50% - 200px);
-        right: -50px;
+        background: linear-gradient(to bottom, rgb(229, 195, 60) 50%, white 0%);
+        justify-content: center;
+        width: 100%;
+        padding-top: calc(calc(100vh / 24) - 10px);
     }
 }
 
-@media only screen and (max-width: 480px) {}
+@media only screen and (min-width: 769px) and (max-width: 1199px) {}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {}
+
+@media only screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .card.small {
+        width: 300px;
+    }
+
+    .card-container {
+        margin-bottom: 50px;
+    }
+}
