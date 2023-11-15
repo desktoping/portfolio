@@ -1,32 +1,46 @@
-import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import ProTip from './ProTip';
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import FeedComponent from "./components/content/feed";
+import PostComponent from "./components/content/post";
+import PostFormComponent from "./components/content/post-form";
+import ProfileComponent from "./components/content/profile";
+import Header from "./components/header";
+import { generateFeed } from "./utils/generate-feed";
+import { generatePost } from "./utils/generate-post";
+import NotificationComponent from "./components/content/notification";
+import NewsComponent from "./components/content/news";
 
-function Copyright() {
+const App = () => {
   return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}.
-    </Typography>
-  );
-}
-
-export default function App() {
-  return (
-    <Container maxWidth="sm">
+    <Container maxWidth="xl">
       <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Material UI Vite.js example in TypeScript
-        </Typography>
-        <ProTip />
-        <Copyright />
+        <Header />
+        <Box sx={{ my: 4, display: "flex", justifyContent: "space-between" }}>
+          <Box sx={{ flex: 1, backgroundColor: "#fcfcfc" }}>
+            <Box sx={{ m: 4 }}>
+              <ProfileComponent />
+            </Box>
+            <Box sx={{ m: 2 }}>
+              <FeedComponent data={generateFeed(3)} />
+            </Box>
+            <Box sx={{ m: 2 }}>
+              <FeedComponent data={generateFeed(3)} />
+            </Box>
+          </Box>
+          <Box sx={{ flex: 3, backgroundColor: "#fcfcfc" }}>
+            <PostFormComponent />
+            <PostComponent data={generatePost(5)} />
+          </Box>
+          <Box sx={{ flex: 1, backgroundColor: "#fcfcfc" }}>
+            <Box sx={{ mb: 2 }}>
+              <NotificationComponent />
+            </Box>
+            <NewsComponent />
+          </Box>
+        </Box>
       </Box>
     </Container>
   );
-}
+};
+
+export default App;
