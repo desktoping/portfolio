@@ -14,8 +14,11 @@ Code is developed by hand - though I was templated to use AI to create the code 
 ## wireframe-app
 Demonstrate ability to use a wireframe/design to create a functional component
 
+Inspired by an image taken from google search when searching for `websites wireframes` keyword.
+
+![Screen Shot 2023-11-15 at 8 58 29 AM](https://github.com/desktoping/portfolio/assets/12272643/09333561-1e27-4f4c-b4d2-e5895507dd2b)
+
 Uses vite + material ui template for the project
 
-![wireframe](https://github.com/desktoping/portfolio/assets/12272643/0675d052-a23c-4d03-9cb7-49ce511e101e)
 
 ```I do not claim ownership of the template used.```
