@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ProjectCard from "../../shared/project-card";
 import Portfolio from "../../images/portfolio.png";
+import Wireframe from "../../images/wireframe.png";
 
 const FrontendProjectContainer = () => {
   const [selected, setSelected] = useState<number>(0);
@@ -23,32 +24,11 @@ const FrontendProjectContainer = () => {
           onClick={() => setSelected(0)}
         />
         <ProjectCard
-          title="Portfolio"
+          title="Wireframe"
           ImageComponent={
-            <img width={200} src={Portfolio} alt="portfolio project" />
+            <img width={200} src={Wireframe} alt="portfolio project" />
           }
           onClick={() => setSelected(1)}
-        />
-        <ProjectCard
-          title="Portfolio"
-          ImageComponent={
-            <img width={200} src={Portfolio} alt="portfolio project" />
-          }
-          onClick={() => setSelected(2)}
-        />
-        <ProjectCard
-          title="Portfolio"
-          ImageComponent={
-            <img width={200} src={Portfolio} alt="portfolio project" />
-          }
-          onClick={() => setSelected(3)}
-        />
-        <ProjectCard
-          title="Portfolio"
-          ImageComponent={
-            <img width={200} src={Portfolio} alt="portfolio project" />
-          }
-          onClick={() => setSelected(4)}
         />
       </div>
       <div style={{ display: "flex", flex: 1 }}>
@@ -90,6 +70,27 @@ const FrontendProjectContainer = () => {
             <p>
               <a
                 href="https://github.com/desktoping/portfolio/tree/main/portfolio-app"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button style={{ width: 300, height: 50 }} className="primary">
+                  View project code
+                </button>
+              </a>
+            </p>
+          </div>
+        )}
+        {selected === 1 && (
+          <div>
+            <p>
+              Wireframe project to demonstrate ability to convert a
+              wireframe/design into component.
+            </p>
+            <br />
+            <br />
+            <p>
+              <a
+                href="https://github.com/desktoping/portfolio/tree/main/wireframe-app"
                 target="_blank"
                 rel="noreferrer"
               >
