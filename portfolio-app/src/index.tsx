@@ -2,18 +2,28 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import Container from "./components/container";
+import Container from "./components/main/container";
 import { pdfjs } from "react-pdf";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Projects from "./components/project";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
+const routes = createBrowserRouter([
+  {
+    path: "/",
+    element: <Container />,
+  },
+  { path: "/projects", element: <Projects /> },
+]);
+
 pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.js";
 
 root.render(
   <React.StrictMode>
-    <Container />
+    <RouterProvider router={routes} />
   </React.StrictMode>
 );
 

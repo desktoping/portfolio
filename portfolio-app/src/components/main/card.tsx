@@ -1,5 +1,5 @@
-import "./css/card.css";
-import { useMediaQuery } from "./shared/use-media-query";
+import "./card.css";
+import { useMediaQuery } from "../shared/use-media-query";
 
 const Card = () => {
   const isSmall = useMediaQuery("(max-width: 480px)");

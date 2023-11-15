@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button {
+  background-color: transparent;
+  border: 0px;
+  text-transform: capitalize;
+  font-size: 24px;
+  font-weight: 800;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button.primary {
+  background-color: blue;
+  color: white;
+}

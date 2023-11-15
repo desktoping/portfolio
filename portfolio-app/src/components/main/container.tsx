@@ -1,15 +1,15 @@
 import { useState } from "react";
 import Card from "./card";
-import "./css/container.css";
+import "./container.css";
 import Content from "./content";
-import Centered from "./shared/centered";
-import Resume from "./shared/pdf";
+import Centered from "../shared/centered";
+import Resume from "../shared/pdf";
 import {
   ResumeViewContextConsumer,
   ResumeViewContextProvider,
-} from "./context";
+} from "../context";
 import ReactDOM from "react-dom";
-import { useMediaQuery } from "./shared/use-media-query";
+import { useMediaQuery } from "../shared/use-media-query";
 
 /**
  * main page container

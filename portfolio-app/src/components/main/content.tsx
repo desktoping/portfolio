@@ -1,5 +1,6 @@
-import "./css/content.css";
-import { ResumeViewContextConsumer } from "./context";
+import "./content.css";
+import { ResumeViewContextConsumer } from "../context";
+import { Link } from "react-router-dom";
 
 const Content = () => {
   return (
@@ -16,13 +17,15 @@ const Content = () => {
         >
           <ResumeViewContextConsumer>
             {({ toggleValue }) => (
-              <button className="resume" onClick={toggleValue}>
+              <button className="primary" onClick={toggleValue}>
                 RESUME
               </button>
             )}
           </ResumeViewContextConsumer>
 
-          <button>PROJECTS</button>
+          <Link to="/projects">
+            <button style={{ height: 40, width: 150 }}>PROJECTS</button>
+          </Link>
         </div>
         <div style={{ marginTop: 50 }}>
           <p>
