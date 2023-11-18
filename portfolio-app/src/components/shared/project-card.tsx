@@ -15,6 +15,7 @@ const ProjectCard = ({ onClick, ImageComponent, title }: IProps) => {
         height: 200,
         width: 200,
         margin: 20,
+        overflow: "hidden",
       }}
     >
       <h3>{title}</h3>
