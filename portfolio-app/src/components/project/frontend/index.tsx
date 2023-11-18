@@ -2,6 +2,7 @@ import { useState } from "react";
 import ProjectCard from "../../shared/project-card";
 import Portfolio from "../../images/portfolio.png";
 import Wireframe from "../../images/wireframe.png";
+import ChromeExtension from "../../images/chrome-extension.png";
 
 const FrontendProjectContainer = () => {
   const [selected, setSelected] = useState<number>(0);
@@ -29,6 +30,13 @@ const FrontendProjectContainer = () => {
             <img width={200} src={Wireframe} alt="portfolio project" />
           }
           onClick={() => setSelected(1)}
+        />
+        <ProjectCard
+          title="Chrome extension"
+          ImageComponent={
+            <img width={200} src={ChromeExtension} alt="portfolio project" />
+          }
+          onClick={() => setSelected(2)}
         />
       </div>
       <div style={{ display: "flex", flex: 1 }}>
@@ -91,6 +99,24 @@ const FrontendProjectContainer = () => {
             <p>
               <a
                 href="https://github.com/desktoping/portfolio/tree/main/wireframe-app"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button style={{ width: 300, height: 50 }} className="primary">
+                  View project code
+                </button>
+              </a>
+            </p>
+          </div>
+        )}
+        {selected === 2 && (
+          <div>
+            <p>Chrome extension development for personal use.</p>
+            <br />
+            <br />
+            <p>
+              <a
+                href="https://github.com/desktoping/portfolio/tree/main/chrome-ext"
                 target="_blank"
                 rel="noreferrer"
               >
