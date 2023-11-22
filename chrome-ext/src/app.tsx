@@ -63,9 +63,19 @@ export const App = () => {
     let value = e.target.value;
 
     if (isNaN(+value) || value != +value) {
+      // Handle use case where copy pasting a possible number with multiple `.`
+      const matches = [...value.matchAll(/\./g)];
+      let lastIndex = value.length - 1;
+
+      // Do not accept anything after the second `.`
+      if (matches.length > 1) {
+        lastIndex = matches[1].index;
+      }
+
       value = value
         .split("")
-        .filter((c: string) => /\d/.test(c))
+        .splice(0, lastIndex)
+        .filter((c: string) => /(\d|\.)/.test(c))
         .join("");
     }
 
